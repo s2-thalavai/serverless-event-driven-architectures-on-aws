@@ -7,20 +7,6 @@ Create an EventBridge Pipe using SQS, Lambda, and SNS
 This lab demonstrates how to build a serverless event-driven architecture using Amazon EventBridge Pipes. 
 The setup connects multiple AWS services to create a loosely coupled, reactive system.
 
-## High-Level Architecture Overview
-
-<img width="1387" height="848" alt="image" src="https://github.com/user-attachments/assets/ad3e3d85-90a8-4eb6-ab6a-5dbbf9dc9c7f" />
-
-
-## Core AWS Components Used
-
-| Component             | Purpose                                                         |
-| --------------------- | --------------------------------------------------------------- |
-| **Amazon SQS**        | Decouple message producers from consumers. Source for the Pipe. |
-| **EventBridge Pipes** | Connects source to target; adds filtering and enrichment.       |
-| **AWS Lambda**        | Enriches messages with extra data from DynamoDB.                |
-| **Amazon DynamoDB**   | Stores enrichment data (e.g., lookup information).              |
-| **Amazon SNS**        | Publishes final messages to subscribers (email, etc.).          |
 
 
 
