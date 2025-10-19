@@ -14,11 +14,14 @@ The setup connects multiple AWS services to create a loosely coupled, reactive s
 
 ## Core AWS Components Used
 
-    1. EventBridge
-    2. Lambda
-    3. SQS
-    4. DynamoDB
-    5. SNS
+| Component             | Purpose                                                         |
+| --------------------- | --------------------------------------------------------------- |
+| **Amazon SQS**        | Decouple message producers from consumers. Source for the Pipe. |
+| **EventBridge Pipes** | Connects source to target; adds filtering and enrichment.       |
+| **AWS Lambda**        | Enriches messages with extra data from DynamoDB.                |
+| **Amazon DynamoDB**   | Stores enrichment data (e.g., lookup information).              |
+| **Amazon SNS**        | Publishes final messages to subscribers (email, etc.).          |
+
 
 
 ## Cloud Lab Tasks
